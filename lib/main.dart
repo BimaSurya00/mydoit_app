@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mydoit_app/feature/auth/view/sign_in.dart';
+import 'package:mydoit_app/feature/landing_page/view/landing_page.dart';
 import 'package:mydoit_app/feature/welcome_page/view/onboarding.dart';
 
 void main() {
