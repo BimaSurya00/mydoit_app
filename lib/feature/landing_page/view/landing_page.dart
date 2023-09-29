@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mydoit_app/feature/auth/view/sign_in.dart';
+import 'package:mydoit_app/feature/home/view/home_view.dart';
 
 class LandingPage1 extends StatefulWidget {
   const LandingPage1({super.key});
@@ -19,9 +21,10 @@ class _LandingPage1State extends State<LandingPage1> {
             width: double.infinity,
             height: 414,
             color: Colors.grey,
+            child: Image.asset('assets/icons/Google.png'),
           ),
-          SizedBox(height: 40),
-          Container(
+          const SizedBox(height: 40),
+          SizedBox(
             width: 328,
             height: 118,
             child: Text(
@@ -30,8 +33,8 @@ class _LandingPage1State extends State<LandingPage1> {
                   GoogleFonts.inter(fontSize: 32, fontWeight: FontWeight.w600),
             ),
           ),
-          SizedBox(height: 68),
-          Container(
+          const SizedBox(height: 68),
+          SizedBox(
             width: 328,
             height: 56,
             child: Row(
@@ -40,26 +43,33 @@ class _LandingPage1State extends State<LandingPage1> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    fixedSize: Size(160, 56),
-                  ),
-                  onPressed: () {},
+                      backgroundColor: Colors.white,
+                      fixedSize: const Size(160, 56),
+                      elevation: 0,
+                      side: const BorderSide(color: Colors.black)),
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignIn(),
+                        ));
+                  },
                   child: Text(
                     'Masuk',
                     style: GoogleFonts.inter(
-                        color: Color(0xff818181),
+                        color: Colors.black,
                         fontSize: 16,
                         fontWeight: FontWeight.w500),
                   ),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xff111111),
-                    fixedSize: Size(160, 56),
-                  ),
+                      backgroundColor: const Color(0xff111111),
+                      fixedSize: const Size(160, 56),
+                      elevation: 0),
                   onPressed: () {},
                   child: Text(
-                    'Masuk',
+                    'Daftar',
                     style: GoogleFonts.inter(
                         color: Colors.white,
                         fontSize: 16,
@@ -69,13 +79,20 @@ class _LandingPage1State extends State<LandingPage1> {
               ],
             ),
           ),
-          SizedBox(height: 24),
-          Text(
-            'Masuk Tanpa Daftar',
-            style: GoogleFonts.inter(
-                fontSize: 13,
-                fontWeight: FontWeight.w500,
-                color: Color(0xff818181)),
+          const SizedBox(height: 24),
+          GestureDetector(
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HomePage(),
+                )),
+            child: Text(
+              'Masuk Tanpa Daftar',
+              style: GoogleFonts.inter(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
+                  color: const Color(0xff818181)),
+            ),
           )
         ],
       ),
