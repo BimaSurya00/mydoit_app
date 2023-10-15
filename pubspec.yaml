@@ -38,6 +38,7 @@ dependencies:
   dots_indicator: ^3.0.0
   google_fonts: ^6.1.0
   introduction_screen: ^3.1.9
+  flutter_otp_text_field: ^1.1.1
   
 
 dev_dependencies:

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mydoit_app/feature/forgot_password/view/forgot_password.dart';
+import 'package:mydoit_app/feature/auth/view/sign_up.dart';
 import 'package:mydoit_app/feature/welcome_page/view/onboarding.dart';
 
 class SignIn extends StatefulWidget {
@@ -88,9 +90,15 @@ class _SignInState extends State<SignIn> {
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(top: 16, left: 224),
-                child: Text('Lupa Password?'),
+              Padding(
+                padding: const EdgeInsets.only(top: 16, left: 224),
+                child: GestureDetector(
+                    onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ForgotPassword(),
+                        )),
+                    child: const Text('Lupa Password?')),
               ),
               const SizedBox(height: 32),
               ElevatedButton(
@@ -168,7 +176,7 @@ class _SignInState extends State<SignIn> {
                   onPressed: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const OnBoarding(),
+                        builder: (context) => const SignUp(),
                       )),
                   child: RichText(
                     text: TextSpan(

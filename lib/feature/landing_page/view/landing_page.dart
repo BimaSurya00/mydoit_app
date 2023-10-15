@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mydoit_app/feature/auth/view/sign_in.dart';
+import 'package:mydoit_app/feature/auth/view/sign_up.dart';
 import 'package:mydoit_app/feature/home/view/home_view.dart';
 
 class LandingPage1 extends StatefulWidget {
@@ -67,7 +68,13 @@ class _LandingPage1State extends State<LandingPage1> {
                       backgroundColor: const Color(0xff111111),
                       fixedSize: const Size(160, 56),
                       elevation: 0),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const SignUp(),
+                        ));
+                  },
                   child: Text(
                     'Daftar',
                     style: GoogleFonts.inter(
