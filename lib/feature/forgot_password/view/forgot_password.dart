@@ -20,7 +20,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         foregroundColor: Colors.black,
       ),
       body: Padding(
-        padding: const EdgeInsets.only(top: 10, left: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

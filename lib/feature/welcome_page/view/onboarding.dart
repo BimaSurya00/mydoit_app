@@ -20,7 +20,34 @@ class _OnBoardingState extends State<OnBoarding> {
           title: 'Selamat datang \ndi MyDoit!',
           body:
               'Dapatkan perlindungan, investasi, dan\nperencanaan keuangan yang lebih baik.',
-          image: Image.asset('assets/icons/Google.png'),
+          image: Container(
+            width: double.infinity,
+            child: Image.asset(
+              'assets/images/1.png',
+              fit: BoxFit.cover,
+            ),
+          ),
+          decoration: PageDecoration(
+            imageFlex: 3,
+            bodyFlex: 2,
+            titlePadding: const EdgeInsets.only(bottom: 15, top: 1),
+            bodyTextStyle: GoogleFonts.inter(
+                color: const Color(0xff818181),
+                fontSize: 14,
+                fontWeight: FontWeight.w400),
+            titleTextStyle:
+                GoogleFonts.inter(fontSize: 32, fontWeight: FontWeight.w600),
+          ),
+        ),
+        PageViewModel(
+          title: 'Kelola keuangan\ndengan mudah',
+          body: 'Solusi finansial lengkap, mudah, dan tepat\nsasaran.',
+          image: Container(
+              width: double.infinity,
+              child: Image.asset(
+                'assets/images/2.png',
+                fit: BoxFit.cover,
+              )),
           decoration: PageDecoration(
             // safeArea: 9,
             imageFlex: 3,
@@ -35,44 +62,15 @@ class _OnBoardingState extends State<OnBoarding> {
           ),
         ),
         PageViewModel(
-          title: 'Kelola polis asuransi\ndengan mudah',
-          body: 'Mulai dari asuransi jiwa, kesehatan, properti,\nhingga mobil.',
-          image: Image.asset('assets/icons/Google.png'),
-          decoration: PageDecoration(
-            // safeArea: 9,
-            imageFlex: 3,
-            bodyFlex: 2,
-            titlePadding: const EdgeInsets.only(bottom: 15, top: 1),
-            bodyTextStyle: GoogleFonts.inter(
-                color: const Color(0xff818181),
-                fontSize: 14,
-                fontWeight: FontWeight.w400),
-            titleTextStyle:
-                GoogleFonts.inter(fontSize: 32, fontWeight: FontWeight.w600),
-          ),
-        ),
-        PageViewModel(
-          title: 'Investasi di berbagai\ninstrumen keuangan',
-          body: 'Seperti saham, Obligasi, reksadana, dan mata\nuang kripto.',
-          image: Image.asset('assets/icons/Google.png'),
-          decoration: PageDecoration(
-            // safeArea: 9,
-            imageFlex: 3,
-            bodyFlex: 2,
-            titlePadding: const EdgeInsets.only(bottom: 15, top: 1),
-            bodyTextStyle: GoogleFonts.inter(
-                color: const Color(0xff818181),
-                fontSize: 14,
-                fontWeight: FontWeight.w400),
-            titleTextStyle:
-                GoogleFonts.inter(fontSize: 32, fontWeight: FontWeight.w600),
-          ),
-        ),
-        PageViewModel(
-          title: 'Transfer dana lebih\ncepat dan aman',
+          title: 'Sederhanakan\nKeuanganmu',
           body:
-              'Transfer dana antar rekening bank, dengan cepat\ndan aman termasuk transfer internasional.',
-          image: Image.asset('assets/icons/Google.png'),
+              'Ucapkan selamat tinggal pada tekanan finansial,\nkami bantu sederhanakan keuanganmu.',
+          image: Container(
+              width: double.infinity,
+              child: Image.asset(
+                'assets/images/3.png',
+                fit: BoxFit.cover,
+              )),
           decoration: PageDecoration(
             // safeArea: 9,
             imageFlex: 3,
@@ -87,10 +85,37 @@ class _OnBoardingState extends State<OnBoarding> {
           ),
         ),
         PageViewModel(
-          title: 'Lacak pendapatan\ndan pengeluaran',
+          title: 'Panduan yang\nDipersonalisasi',
           body:
-              'Dapatkan insights untuk membantu anda\nmencapai tujuan finansial.',
-          image: Image.asset('assets/icons/Google.png'),
+              'Wawasan dan rekomendasi yang dipersonalisasi,\nuntuk masa depan finansialmu.',
+          image: Container(
+              width: double.infinity,
+              child: Image.asset(
+                'assets/images/4.png',
+                fit: BoxFit.cover,
+              )),
+          decoration: PageDecoration(
+            // safeArea: 9,
+            imageFlex: 3,
+            bodyFlex: 2,
+            titlePadding: const EdgeInsets.only(bottom: 15, top: 1),
+            bodyTextStyle: GoogleFonts.inter(
+                color: const Color(0xff818181),
+                fontSize: 14,
+                fontWeight: FontWeight.w400),
+            titleTextStyle:
+                GoogleFonts.inter(fontSize: 32, fontWeight: FontWeight.w600),
+          ),
+        ),
+        PageViewModel(
+          title: 'Keamanan yang\nKuat',
+          body: 'Bersama kami, kelola keuanganmu dengan lebih\npercaya diri.',
+          image: Container(
+              width: double.infinity,
+              child: Image.asset(
+                'assets/images/5.png',
+                fit: BoxFit.cover,
+              )),
           decoration: PageDecoration(
             // safeArea: 9,
             imageFlex: 3,
@@ -131,10 +156,10 @@ class _OnBoardingState extends State<OnBoarding> {
               backgroundColor: Colors.white,
               fixedSize: const Size(328, 56),
               elevation: 0,
-              side: const BorderSide(color: Colors.black)),
+              side: const BorderSide(color: Color(0xff00D27F))),
           child: const Text(
             'Mulai',
-            style: TextStyle(color: Colors.black),
+            style: TextStyle(color: Color(0xff00D27F)),
           ),
         ),
       ),

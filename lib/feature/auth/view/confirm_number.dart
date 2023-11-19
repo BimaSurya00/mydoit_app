@@ -63,7 +63,7 @@ class _ConfirmNumberState extends State<ConfirmNumber> {
               style: ElevatedButton.styleFrom(
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(8))),
-                  backgroundColor: Colors.black,
+                  backgroundColor: const Color(0xff00D27F),
                   fixedSize: const Size(328, 48),
                   elevation: 0),
               child: const Text(
