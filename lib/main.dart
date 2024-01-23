@@ -10,7 +10,9 @@ import 'package:mydoit_app/feature/home/view/total_saldo_view.dart';
 import 'package:mydoit_app/feature/home/widget/card_kelas.dart';
 import 'package:mydoit_app/feature/home/widget/card_liputan.dart';
 import 'package:mydoit_app/feature/landing_page/view/landing_page.dart';
+import 'package:mydoit_app/feature/pemasukan/pemasukan_view.dart';
 import 'package:mydoit_app/feature/tabungan/view/tabungan_view.dart';
+import 'package:mydoit_app/feature/transaksi_sukses/transaksi_sukses_view.dart';
 import 'package:mydoit_app/feature/welcome_page/view/onboarding.dart';
 import 'package:mydoit_app/widget/bottom_navbar/bottom_navigation_bar.dart';
 
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: BottomNavBar(),
+      home: TransaksiSuksesView(),
     );
   }
 }

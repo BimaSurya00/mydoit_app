@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RiwayatTransaksiView extends StatefulWidget {
-  const RiwayatTransaksiView({super.key});
+class PengeluaranView extends StatefulWidget {
+  const PengeluaranView({super.key});
 
   @override
-  State<RiwayatTransaksiView> createState() => _RiwayatTransaksiViewState();
+  State<PengeluaranView> createState() => _PengeluaranViewState();
 }
 
-class _RiwayatTransaksiViewState extends State<RiwayatTransaksiView> {
+class _PengeluaranViewState extends State<PengeluaranView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +19,7 @@ class _RiwayatTransaksiViewState extends State<RiwayatTransaksiView> {
         elevation: 1,
         centerTitle: true,
         title: Text(
-          'Riwayat transaksi',
+          'Pengeluaran',
           style: GoogleFonts.plusJakartaSans(
               fontSize: 16, fontWeight: FontWeight.w500, color: Colors.black),
         ),

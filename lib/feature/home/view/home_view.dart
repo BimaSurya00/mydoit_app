@@ -70,9 +70,20 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
                             ),
-                            const Icon(
-                              Icons.notifications,
-                              color: Colors.white,
+                            Container(
+                              child: const Row(
+                                children: [
+                                  Icon(
+                                    Icons.add_ic_call,
+                                    color: Colors.white,
+                                  ),
+                                  SizedBox(width: 24),
+                                  Icon(
+                                    Icons.notifications,
+                                    color: Colors.white,
+                                  )
+                                ],
+                              ),
                             )
                           ],
                         ),
@@ -333,7 +344,7 @@ class _HomePageState extends State<HomePage> {
               Container(
                 width: 360,
                 height: 93,
-                padding: EdgeInsets.symmetric(horizontal: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 5),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.white,
@@ -464,10 +475,10 @@ class _HomePageState extends State<HomePage> {
                                   width: 90,
                                   height: 29,
                                   child: Card(
-                                    color: Color(0xff00D27F),
+                                    color: const Color(0xff00D27F),
                                     child: Center(
                                       child: Text(
-                                        'UIUX Design',
+                                        'Akutansi',
                                         style: GoogleFonts.plusJakartaSans(
                                             fontSize: 12,
                                             fontWeight: FontWeight.w500),
@@ -479,10 +490,10 @@ class _HomePageState extends State<HomePage> {
                                   width: 90,
                                   height: 29,
                                   child: Card(
-                                    color: Colors.grey[400],
+                                    color: Colors.grey[300],
                                     child: Center(
                                       child: Text(
-                                        'UIUX Design',
+                                        'Pajak',
                                         style: GoogleFonts.plusJakartaSans(
                                             fontSize: 12,
                                             fontWeight: FontWeight.w500),
@@ -494,10 +505,10 @@ class _HomePageState extends State<HomePage> {
                                   width: 90,
                                   height: 29,
                                   child: Card(
-                                    color: Colors.grey[400],
+                                    color: Colors.grey[300],
                                     child: Center(
                                       child: Text(
-                                        'UIUX Design',
+                                        'Audit',
                                         style: GoogleFonts.plusJakartaSans(
                                             fontSize: 12,
                                             fontWeight: FontWeight.w500),

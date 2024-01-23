@@ -14,7 +14,7 @@ class BottomNavBar extends StatefulWidget {
 class _BottomNavBarState extends State<BottomNavBar> {
   int index = 0;
 
-  final List pages = [const HomePage(), const AnggaranView()];
+  final List pages = [const HomePage(), const AnggaranView(), RiwayatTransaksiView(),];
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mydoit_app/feature/pemasukan/pemasukan_view.dart';
+import 'package:mydoit_app/feature/pengeluaran/pengeluaran_view.dart';
 
 class PopUpNavbar extends StatelessWidget {
   const PopUpNavbar({super.key});
@@ -19,9 +21,10 @@ class PopUpNavbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           const Padding(
-            padding: EdgeInsets.symmetric(horizontal: 250),
+            padding: EdgeInsets.only(left: 300),
             child: Icon(Icons.close, size: 24),
           ),
+          // SizedBox(height: 8),
           Container(
             color: Colors.white,
             width: 348,
@@ -132,77 +135,95 @@ class PopUpNavbar extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 42),
-                Container(
-                  width: 328,
-                  height: 72,
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/icons/hijau.png',
-                        height: 40,
-                      ),
-                      const SizedBox(width: 16),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Pemasukan',
-                            style: GoogleFonts.plusJakartaSans(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white),
-                          ),
-                          Text('Tambahkan catatan transaksi',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PemasukanView(),
+                        ));
+                  },
+                  child: Container(
+                    width: 328,
+                    height: 72,
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/icons/hijau.png',
+                          height: 40,
+                        ),
+                        const SizedBox(width: 16),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Pemasukan',
                               style: GoogleFonts.plusJakartaSans(
-                                  fontSize: 12,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500,
-                                  color: Colors.white))
-                        ],
-                      )
-                    ],
+                                  color: Colors.white),
+                            ),
+                            Text('Tambahkan catatan transaksi',
+                                style: GoogleFonts.plusJakartaSans(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white))
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(height: 16),
-                Container(
-                  width: 328,
-                  height: 72,
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/icons/merah.png',
-                        height: 40,
-                      ),
-                      const SizedBox(width: 16),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'Pengeluaran',
-                            style: GoogleFonts.plusJakartaSans(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white),
-                          ),
-                          Text('Tambahkan catatan transaksi',
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const PengeluaranView(),
+                        ));
+                  },
+                  child: Container(
+                    width: 328,
+                    height: 72,
+                    decoration: BoxDecoration(
+                      color: Colors.red,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Image.asset(
+                          'assets/icons/merah.png',
+                          height: 40,
+                        ),
+                        const SizedBox(width: 16),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Pengeluaran',
                               style: GoogleFonts.plusJakartaSans(
-                                  fontSize: 12,
+                                  fontSize: 16,
                                   fontWeight: FontWeight.w500,
-                                  color: Colors.white))
-                        ],
-                      )
-                    ],
+                                  color: Colors.white),
+                            ),
+                            Text('Tambahkan catatan transaksi',
+                                style: GoogleFonts.plusJakartaSans(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.white))
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],

@@ -9,14 +9,14 @@ class PopUpTampilan extends StatelessWidget {
     return Container(
       width: 360,
       height: 706,
-      color: Colors.white,
+      color: Colors.red,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           SizedBox(height: 8),
           Padding(
             padding: const EdgeInsets.symmetric(
-              horizontal: 370,
+              horizontal: 355,
             ),
             child: Icon(Icons.close),
           ),
@@ -46,7 +46,7 @@ class PopUpTampilan extends StatelessWidget {
           SizedBox(height: 8),
           Container(
             width: 377,
-            height: 400,
+            height: 352,
             color: Colors.yellow,
             child: GridView.builder(
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
