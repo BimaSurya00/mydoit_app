@@ -38,7 +38,10 @@ class _PopUpMenuState extends State<PopUpMenu> {
           size: 24,
         ),
       ),
-      iconPadding: const EdgeInsets.only(left: 295, top: 10, right: 20),
+      iconPadding: const EdgeInsets.only(
+        left: 275,
+        top: 10,
+      ),
       backgroundColor: Colors.white,
       content: Container(
         width: 260,
